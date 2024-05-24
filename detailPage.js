@@ -20,17 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log(country);
         countryDetail.innerHTML = `
             <img src="${country.flags.svg}" alt="${country.name.common} flag">
-            <div>
+            <div class="items">
             <h1>${country.name.common}</h1>
             <p><strong>Native Name:</strong> ${country.name.nativeName ? Object.values(country.name.nativeName)[0].common : country.name.common}</p>
             <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
             <p><strong>Region:</strong> ${country.region}</p>
             <p><strong>Sub Region:</strong> ${country.subregion}</p>
             <p><strong>Capital:</strong> ${country.capital}</p>
-            <p><strong>Top Level Domain:</strong> ${country.tld}</p>
+            <p><strong>Border Countries:</strong> ${country.borders ? country.borders.map(border => `<button class="border-button" data-code="${border}">${border}</button>`).join(' ') : 'N/A'}</p>
+             </div>
+             <div> 
+             <p><strong>Top Level Domain:</strong> ${country.tld}</p>
             <p><strong>Currencies:</strong> ${country.currencies ? Object.values(country.currencies).map(c => c.name).join(', ') : 'N/A'}</p>
             <p><strong>Languages:</strong> ${country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</p>
-            <p><strong>Border Countries:</strong> ${country.borders ? country.borders.map(border => `<button class="border-button" data-code="${border}">${border}</button>`).join(' ') : 'N/A'}</p> </div>
+
+             </div>
         `;
 
         document.querySelectorAll('.border-button').forEach(button => {

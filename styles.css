@@ -5,6 +5,14 @@ body {
     margin: 0;
     padding: 0;
 }
+#takeBack-button {
+    padding: 10px;
+    background-color: #202c37;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 header {
     display: flex;
@@ -13,6 +21,7 @@ header {
     padding: 20px;
     background-color: #202c37;
 }
+
 
 header input, header select {
     padding: 10px;
@@ -23,18 +32,16 @@ header input, header select {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 20px;
     padding: 20px;
 }
-#takeBack-button {
-    padding: 10px;
+
+#region-filter{
     background-color: #202c37;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    color: white;
 }
+
 
 
 .country {
@@ -59,6 +66,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 40px;
 }
 
 #country-details img {
@@ -80,4 +88,8 @@ main {
     border-radius: 5px;
 }
 
+.items{
+    padding-left: 10px;
+    line-height: 20px;
+}
 
