@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         countries.forEach(country => {
             const countryElement = document.createElement('div');
             countryElement.classList.add('country');
-            // console.log(country);
+            console.log(country);
             countryElement.innerHTML = `
                 <img src="${country.flags.svg}" alt="${country.name.common} flag">
                 <div class="country-info">

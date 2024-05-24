@@ -27,6 +27,15 @@ main {
     gap: 20px;
     padding: 20px;
 }
+#takeBack-button {
+    padding: 10px;
+    background-color: #202c37;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 
 .country {
     background-color: #4e5d6c;
@@ -45,22 +54,30 @@ main {
     padding: 10px;
 }
 
-#country-detail {
+#country-details {
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-#country-detail img {
+#country-details img {
     width: 100%;
     height: auto;
     max-height: 300px;
+    max-width: 500px;
     object-fit: cover;
 }
-
-#back-button {
-    padding: 10px;
-    background-color: #202c37;
+#country-details p {
+    margin: 5px 0;
+}
+.border-button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #4e5d6c;
     color: #fff;
-    border: none;
     cursor: pointer;
     border-radius: 5px;
 }
+
+
