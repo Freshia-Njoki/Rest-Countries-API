@@ -67,6 +67,7 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 40px;
+    margin-top: 40px;
 }
 
 #country-details img {
