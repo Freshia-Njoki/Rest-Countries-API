@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const countriesContainer = document.getElementById('countries-container');
     const searchInput = document.getElementById('search');
     const regionFilter = document.getElementById('region-filter');
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
     const fetchCountries = async () => {
         try {
@@ -55,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching countries:', error);
         }
     };
+
+    const toggleDarkMode = () => {
+        body.classList.toggle('light-mode');
+        const elementsToToggle = document.querySelectorAll('header, #takeBack-button, #region-filter, .country, .border-button');
+        elementsToToggle.forEach(element => element.classList.toggle('light-mode'));
+    };
+
+    darkModeToggle.addEventListener('change', toggleDarkMode);
 
     searchInput.addEventListener('input', filterCountries);
     regionFilter.addEventListener('change', filterCountries);

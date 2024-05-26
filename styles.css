@@ -94,3 +94,46 @@ main {
     line-height: 20px;
 }
 
+
+/* dark-mode */
+body.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+header.light-mode, #takeBack-button.light-mode, #region-filter.light-mode, .country.light-mode, .border-button.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+header.light-mode input, header.light-mode select {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: var(--toggle);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: var(--bg);
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+    left: 21px;
+}
